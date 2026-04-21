@@ -369,7 +369,7 @@ function undo(){if(!undoStack.length)return;els=undoStack.pop();selIdx=-1;updBtn
 function clearAll(){if(!els.length)return;pushUndo();els=[];selIdx=-1;updBtn();refreshProps();redraw()}
 function doExport(){if(!img)return;const sv=selIdx;selIdx=-1;redraw();const a=document.createElement('a');a.download='edited-image.png';a.href=canvas.toDataURL('image/png');a.click();selIdx=sv;redraw()}
 
-// ---- Keyboard ----
+// ---- Keyboard good！！！----
 document.addEventListener('keydown',function(e){
   if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA'||e.target.tagName==='SELECT')return;
   if((e.ctrlKey||e.metaKey)&&e.key==='z'){e.preventDefault();undo()}
